@@ -1,4 +1,4 @@
-const Generate = require('./lib/Generate');
+const Generate = require('./src/Generate');
 
 const gen = new Generate();
 

@@ -1,9 +1,9 @@
-const inquirer = require('../node_modules/inquirer');
+const inquirer = require('inquirer');
 const fs = require('fs');
-const Engineer = require('./Engineer');
-const Intern = require('./Intern');
-const Manager = require('./Manager');
-const Member = require('./Employee');
+const Engineer = require('../lib/Engineer');
+const Intern = require('../lib/Intern');
+const Manager = require('../lib/Manager');
+const Member = require('../lib/Employee');
 
 const engQ = [
     {
@@ -190,6 +190,8 @@ class Generate {
                     name: 'choice'
                 }
             ])
+            // Finishes up the prompt and then executes the code after the prompt finishes.
+            //This stops the this.endFile() from being executed every time
             if (moreMem.choice) {
                 this.add();
             } else {
