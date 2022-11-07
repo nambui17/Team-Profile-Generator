@@ -51,7 +51,9 @@
 
   Clicking on the email address of one of the team members will open up the user's default email application and start to construct an email with the person's email in the `"To:"` line.
 
-  Clicking on any Engineer's GitHub profile name will redirect to their GitHub profile.
+  Clicking on any Engineer's GitHub profile name will redirect to their GitHub profile. A video walkthrough of the program can be found at the following link.
+
+  [Video Walkthrough](https://watch.screencastify.com/v/Ac75b8Y4JJmu3IH8PbUI)
 
   ## Credits
 
