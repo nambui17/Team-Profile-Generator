@@ -6,16 +6,15 @@
     --kobe: #78290F;
 }
 
-body {
-    background-color: var(--almond);
-}
 
 #headerbox {
-    background-color: var(--almond);
-    height: 20%;
-    padding: 2px;
+    background-color: var(--kobe);
+}
+
+#headerbox h1 {
+    color: var(--almond);
 }
 
 span h1 {
-    color: var(--rich)
+    color: var(--rich);
 }
