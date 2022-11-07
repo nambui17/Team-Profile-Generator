@@ -3,28 +3,56 @@ const fs = require('fs');
 const Engineer = require('../lib/Engineer');
 const Intern = require('../lib/Intern');
 const Manager = require('../lib/Manager');
-const Member = require('../lib/Employee');
+const Employee = require('../lib/Employee');
+const { Input } = require('postcss');
+
+//regular expression pattern
+const emailPat =  /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
 
 const engQ = [
     {
         type: 'input',
         message: "What is the engineer's name?",
-        name: 'name'
+        name: 'name',
+        validate: function(name) {
+            if (name != "") {
+                return true;
+            } else {
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         message: "What is the engineer's email?",
-        name: 'email'
+        name: 'email',
+        validate: function(email) {
+            return emailPat.test(email);
+        }
     },
     {
         type: 'input',
         message: "What is the engineer's employee ID?",
-        name: 'id'
+        name: 'id',
+        validate: function(id) {
+            if (id != "") {
+                return true;
+            } else {
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         message: "What is the engineer's GitHub username?",
-        name: 'gh'
+        name: 'gh',
+        validate: function(gh) {
+            if (gh != "") {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 ];
 
@@ -32,22 +60,46 @@ const intQ = [
     {
         type: 'input',
         message: "What is the intern's name?",
-        name: 'name'
+        name: 'name',
+        validate: function(name) {
+            if (name != "") {
+                return true;
+            } else {
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         message: "What is the intern's email?",
-        name: 'email'
+        name: 'email',
+        validate: function(email) {
+            return emailPat.test(email);
+        }
     },
     {
         type: 'input',
         message: "What is the intern's employee ID?",
-        name: 'id'
+        name: 'id',
+        validate: function(id) {
+            if (id != "") {
+                return true;
+            } else {
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         message: "What is the intern's school?",
-        name: 'school'
+        name: 'school',
+        validate: function(school) {
+            if (school != "") {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 ];
 
@@ -55,22 +107,46 @@ const manQ = [
     {
         type: 'input',
         message: "What is the manager's name?",
-        name: 'name'
+        name: 'name',
+        validate: function(name) {
+            if (name != "") {
+                return true;
+            } else {
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         message: "What is the manager's email?",
-        name: 'email'
+        name: 'email',
+        validate: function(email) {
+            return emailPat.test(email);
+        }
     },
     {
         type: 'input',
         message: "What is the manager's employee ID?",
-        name: 'id'
+        name: 'id',
+        validate: function(id) {
+            if (id != "") {
+                return true;
+            } else {
+                return false;
+            }
+        }
     },
     {
         type: 'input',
         message: "What is the manager's office number",
-        name: 'office'
+        name: 'office',
+        validate: function(office) {
+            if (office != "") {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 ];
 
@@ -219,5 +295,7 @@ class Generate {
         );
     };
 }
+
+
 
 module.exports = Generate;
